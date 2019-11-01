@@ -1,5 +1,6 @@
 package com.eldhopj.plantdiseasedetection_tflite.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,7 +24,6 @@ public class DetailActivity extends AppCompatActivity {
     private ActivityDetailBinding binding;
     private List<Recognition> results;
     private Bitmap capturedImage;
-    private Toolbar toolbar;
 
     public static void start(Context context, ArrayList<Recognition> results, byte[] bitmap) {
         Intent starter = new Intent(context, DetailActivity.class);
@@ -60,8 +60,11 @@ public class DetailActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("SetTextI18n")
     private void setData() {
-        binding.DiseaseOne.setText(results.get(0).getTitle() + " chances are "+ (results.get(0).getConfidence()*100));
+        if (!results.isEmpty()) {
+            binding.DiseaseOne.setText("Chances for " + results.get(0).getTitle() + " is " + convertFloatIntoPercentage(results.get(0).getConfidence()));
+        }
         binding.capturedImage.setImageBitmap(capturedImage);
     }
 
@@ -75,6 +78,11 @@ public class DetailActivity extends AppCompatActivity {
                     intent.getByteArrayExtra("bitmap"), 0,
                     Objects.requireNonNull(intent.getByteArrayExtra("bitmap")).length);
         }
+    }
+
+    @SuppressLint("DefaultLocale")
+    private String convertFloatIntoPercentage(Float confidence) {
+        return String.format("%.2f", confidence * 100) + "%";
     }
 
 }
