@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         final List<Recognition> results = classifier.recognizeImage(bitmap);
 
-        ArrayList arrayList = new ArrayList(results);
+        ArrayList<Recognition> arrayList = new ArrayList<>(results);
 
         binding.progressBar.setVisibility(View.GONE);
 
