@@ -7,11 +7,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.eldhopj.plantdiseasedetection_tflite.DiseaseAdapter;
 import com.eldhopj.plantdiseasedetection_tflite.R;
-import com.eldhopj.plantdiseasedetection_tflite.Utility;
+import com.eldhopj.plantdiseasedetection_tflite.adapter.DiseaseAdapter;
 import com.eldhopj.plantdiseasedetection_tflite.databinding.ActivityHistoryBinding;
 import com.eldhopj.plantdiseasedetection_tflite.room.RoomClient;
+import com.eldhopj.plantdiseasedetection_tflite.utility.Utility;
 
 public class HistoryActivity extends AppCompatActivity {
 
@@ -39,8 +39,6 @@ public class HistoryActivity extends AppCompatActivity {
 
     private void fetchData() {
         RoomClient.getDatabase(getApplicationContext()).diseaseDao()
-                .getAllData().observe(this, diseaseLists -> {
-            diseaseAdapter.addItemRange(diseaseLists);
-        });
+                .getAllData().observe(this, diseaseLists -> diseaseAdapter.addItemRange(diseaseLists));
     }
 }

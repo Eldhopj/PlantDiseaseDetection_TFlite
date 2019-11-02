@@ -1,10 +1,10 @@
-package com.eldhopj.plantdiseasedetection_tflite;
+package com.eldhopj.plantdiseasedetection_tflite.viewHolders;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.eldhopj.plantdiseasedetection_tflite.databinding.ItemDiseaseHistoryBinding;
 
-class DiseaseViewHolder extends RecyclerView.ViewHolder {
+public class DiseaseViewHolder extends RecyclerView.ViewHolder {
     private final ItemDiseaseHistoryBinding binding;
 
     public DiseaseViewHolder(ItemDiseaseHistoryBinding binding) {

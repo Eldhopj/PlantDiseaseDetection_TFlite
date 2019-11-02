@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite;
+package com.eldhopj.plantdiseasedetection_tflite.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.eldhopj.plantdiseasedetection_tflite.databinding.ItemDiseaseHistoryBinding;
 import com.eldhopj.plantdiseasedetection_tflite.room.DiseaseList;
+import com.eldhopj.plantdiseasedetection_tflite.viewHolders.DiseaseViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
