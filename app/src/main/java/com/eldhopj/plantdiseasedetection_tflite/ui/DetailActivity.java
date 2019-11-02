@@ -21,7 +21,9 @@ import com.eldhopj.plantdiseasedetection_tflite.room.DiseaseList;
 import com.eldhopj.plantdiseasedetection_tflite.room.RoomClient;
 import com.eldhopj.plantdiseasedetection_tflite.tfLite.Recognition;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -99,7 +101,14 @@ public class DetailActivity extends AppCompatActivity {
 
     private void setIntoLocalDb(String disease) {
         RoomClient roomClient = RoomClient.getDatabase(getApplicationContext());
-        new InsertAsyncTask(roomClient.diseaseDao()).execute(new DiseaseList(disease));
+        new InsertAsyncTask(roomClient.diseaseDao()).execute(new DiseaseList(disease, getTime()));
+    }
+
+    private String getTime() {
+        Calendar c = Calendar.getInstance();
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return sdf.format(c.getTime());
     }
 
     private void getExtras () {

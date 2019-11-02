@@ -8,9 +8,11 @@ public class DiseaseList {
     @PrimaryKey(autoGenerate = true)//Room will auto generate the ID , we don't wanna worry about it
     private int id;
     private String disease;
+    private String date;
 
-    public DiseaseList(String disease) {
+    public DiseaseList(String disease, String date) {
         this.disease = disease;
+        this.date = date;
     }
 
     public int getId() {
@@ -25,4 +27,7 @@ public class DiseaseList {
         return disease;
     }
 
+    public String getDate() {
+        return date;
+    }
 }
