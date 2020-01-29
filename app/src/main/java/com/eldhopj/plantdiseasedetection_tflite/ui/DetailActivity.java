@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,6 +40,9 @@ public class DetailActivity extends AppCompatActivity {
         bundle.putByteArray("bitmap",bitmap);
         bundle.putParcelableArrayList("result", results);
         starter.putExtras(bundle);
+        if (Build.VERSION.SDK_INT >= 29) {
+            starter.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         context.startActivity(starter);
     }
 
@@ -72,14 +76,12 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) { // get the ID
-            case R.id.action_history_btn:
-                HistoryActivity.start(getApplicationContext());
-                return true;
-            default:
-                return false;
-
+        // get the ID
+        if (item.getItemId() == R.id.action_history_btn) {
+            HistoryActivity.start(getApplicationContext());
+            return true;
         }
+        return false;
     }
 
     //For Back navigation Icon logic

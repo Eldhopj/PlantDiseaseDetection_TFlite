@@ -2,6 +2,7 @@ package com.eldhopj.plantdiseasedetection_tflite.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,9 @@ public class HistoryActivity extends AppCompatActivity {
 
     public static void start(Context context) {
         Intent starter = new Intent(context, HistoryActivity.class);
+        if (Build.VERSION.SDK_INT >= 29) {
+            starter.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         context.startActivity(starter);
     }
 
