@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.room;
+package com.mainproject.plantdiseasedetection_tflite.room;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

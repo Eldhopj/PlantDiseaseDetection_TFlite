@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.utility;
+package com.mainproject.plantdiseasedetection_tflite.utility;
 
 import android.content.Context;
 

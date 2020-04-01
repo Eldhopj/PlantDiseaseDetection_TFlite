@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.tfLite;
+package com.mainproject.plantdiseasedetection_tflite.tfLite;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.ui;
+package com.mainproject.plantdiseasedetection_tflite.ui;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -7,11 +7,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.eldhopj.plantdiseasedetection_tflite.R;
-import com.eldhopj.plantdiseasedetection_tflite.databinding.ActivityMainBinding;
-import com.eldhopj.plantdiseasedetection_tflite.tfLite.Classifier;
-import com.eldhopj.plantdiseasedetection_tflite.tfLite.Recognition;
-import com.eldhopj.plantdiseasedetection_tflite.tfLite.TensorFlowImageClassifier;
+import com.mainproject.plantdiseasedetection_tflite.R;
+import com.mainproject.plantdiseasedetection_tflite.databinding.ActivityMainBinding;
+import com.mainproject.plantdiseasedetection_tflite.tfLite.Classifier;
+import com.mainproject.plantdiseasedetection_tflite.tfLite.Recognition;
+import com.mainproject.plantdiseasedetection_tflite.tfLite.TensorFlowImageClassifier;
 import com.wonderkiln.camerakit.CameraKitError;
 import com.wonderkiln.camerakit.CameraKitEvent;
 import com.wonderkiln.camerakit.CameraKitEventListener;

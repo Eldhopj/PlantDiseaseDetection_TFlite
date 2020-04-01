@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.ui;
+package com.mainproject.plantdiseasedetection_tflite.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,15 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 
-import com.eldhopj.plantdiseasedetection_tflite.R;
-import com.eldhopj.plantdiseasedetection_tflite.databinding.ActivityDetailBinding;
-import com.eldhopj.plantdiseasedetection_tflite.room.DiseaseDao;
-import com.eldhopj.plantdiseasedetection_tflite.room.DiseaseList;
-import com.eldhopj.plantdiseasedetection_tflite.room.RoomClient;
-import com.eldhopj.plantdiseasedetection_tflite.tfLite.Recognition;
+import com.mainproject.plantdiseasedetection_tflite.R;
+import com.mainproject.plantdiseasedetection_tflite.databinding.ActivityDetailBinding;
+import com.mainproject.plantdiseasedetection_tflite.room.DiseaseDao;
+import com.mainproject.plantdiseasedetection_tflite.room.DiseaseList;
+import com.mainproject.plantdiseasedetection_tflite.room.RoomClient;
+import com.mainproject.plantdiseasedetection_tflite.tfLite.Recognition;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,7 +55,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void setToolBar() {
-        setSupportActionBar((Toolbar) binding.toolbarMain);
+        setSupportActionBar(binding.toolbarMain);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Disease Details");

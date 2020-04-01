@@ -1,4 +1,4 @@
-package com.eldhopj.plantdiseasedetection_tflite.ui;
+package com.mainproject.plantdiseasedetection_tflite.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,11 +8,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.eldhopj.plantdiseasedetection_tflite.R;
-import com.eldhopj.plantdiseasedetection_tflite.adapter.DiseaseAdapter;
-import com.eldhopj.plantdiseasedetection_tflite.databinding.ActivityHistoryBinding;
-import com.eldhopj.plantdiseasedetection_tflite.room.RoomClient;
-import com.eldhopj.plantdiseasedetection_tflite.utility.Utility;
+import com.mainproject.plantdiseasedetection_tflite.R;
+import com.mainproject.plantdiseasedetection_tflite.adapter.DiseaseAdapter;
+import com.mainproject.plantdiseasedetection_tflite.databinding.ActivityHistoryBinding;
+import com.mainproject.plantdiseasedetection_tflite.room.RoomClient;
+import com.mainproject.plantdiseasedetection_tflite.utility.Utility;
 
 public class HistoryActivity extends AppCompatActivity {
 
