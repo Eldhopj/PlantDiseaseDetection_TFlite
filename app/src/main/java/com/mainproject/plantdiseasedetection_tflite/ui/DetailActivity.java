@@ -55,7 +55,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void setToolBar() {
-        setSupportActionBar(binding.toolbarMain);
+
+        setSupportActionBar(findViewById(R.id.toolbar));
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Disease Details");
